@@ -1,0 +1,69 @@
+<div class="register-container">
+  <h1>Create Account</h1>
+  <div [ngClass]="{ 'ng-invalid': isFirstNameError }" class="textbox">
+    <input
+      type="text"
+      placeholder="First Name"
+      [(ngModel)]="firstName"
+      name=""
+      id=""
+    />
+  </div>
+  <div [ngClass]="{ 'ng-invalid': isLastNameError }" class="textbox">
+    <input
+      type="text"
+      placeholder="Last Name"
+      [(ngModel)]="lastName"
+      name=""
+      id=""
+    />
+  </div>
+  <div [ngClass]="{ 'ng-invalid': isEmailError }" class="textbox">
+    <input type="text" placeholder="Email" name="" [(ngModel)]="email" id="" />
+  </div>
+  <div
+    [ngClass]="{ 'ng-invalid': isPasswordError || isPasswordMismatch }"
+    class="textbox"
+  >
+    <input
+      type="password"
+      placeholder="Password"
+      [(ngModel)]="password"
+      name=""
+      id=""
+    />
+  </div>
+  <div
+    [ngClass]="{ 'ng-invalid': isConfirmPasswordError || isPasswordMismatch }"
+    class="textbox"
+  >
+    <input
+      type="password"
+      placeholder="Confirm Password"
+      [(ngModel)]="confirmPassword"
+      name=""
+      id=""
+    />
+  </div>
+
+  <input
+    style="margin: 13px;"
+    class="btn btn-primary"
+    type="button"
+    value="Confirm"
+    (click)="confirm()"
+  />
+
+  <span
+    style="color: red;"
+    *ngIf="
+      isFirstNameError ||
+      isLastNameError ||
+      isEmailError ||
+      isPasswordError ||
+      isConfirmPasswordError ||
+      isPasswordMismatch
+    "
+    >{{ errorMessage }}</span
+  >
+</div>

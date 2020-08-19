@@ -1,0 +1,16 @@
+<div class="home-container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of userDataList">
+        <td>{{ data.id }}</td>
+        <td>{{ data.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

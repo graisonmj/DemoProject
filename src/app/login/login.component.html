@@ -1,0 +1,29 @@
+<div *ngIf="!loggedIn && !toggleRegister" class="container">
+  <h1>Login</h1>
+  <div [ngClass]="{ 'ng-invalid': isUsernameError }" class="textbox">
+    <input type="text" placeholder="Username" [(ngModel)]="username" required />
+  </div>
+  <div [ngClass]="{ 'ng-invalid': isPasswordError }" class="textbox">
+    <input
+      type="password"
+      placeholder="Password"
+      [(ngModel)]="password"
+      value=""
+      required
+    />
+  </div>
+  <input class="btn" type="button" value="Sign In" (click)="login()" />
+  <input
+    class="btn btn-link"
+    type="button"
+    value="Not a User? Register"
+    (click)="register()"
+  />
+
+  <span style="color: red;" *ngIf="isUsernameError || isPasswordError"
+    >*Mandatory field should be filled</span
+  >
+</div>
+
+<app-home *ngIf="loggedIn"></app-home>
+<app-register *ngIf="toggleRegister"></app-register>

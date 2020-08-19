@@ -1,0 +1,47 @@
+.register-container {
+  width: 500px !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -40%);
+  z-index: 1000;
+  font-family: sans-serif;
+  background-color: cornsilk;
+  opacity: 1;
+  padding: 10px;
+  box-shadow: 5px 5px rgb(232, 236, 178);
+
+  h1 {
+    float: left;
+    font-size: 40px;
+    border-bottom: 6px solid #e5e80b;
+    margin-bottom: 30px;
+    padding: 13px 0;
+    color: rgb(3, 3, 73);
+  }
+
+  .textbox {
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid #e5e80b;
+    border-left: 5px solid rgb(174 174 206);
+  }
+
+  .textbox input {
+    border: none;
+    outline: none;
+    background: none;
+    color: black;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
+  }
+
+  .ng-invalid {
+    background-color: #ea94a1;
+  }
+}

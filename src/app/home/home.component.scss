@@ -1,0 +1,19 @@
+.home-container {
+  width: 500px;
+  opacity: 1;
+  background: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  font-family: sans-serif;
+  z-index: 1000;
+
+  table,
+  tr,
+  td,
+  th {
+    background-color: blanchedalmond;
+    border: 1px solid;
+  }
+}
